@@ -28,7 +28,7 @@ module.exports = {
 
   // metadata for About Page
   about: {
-    Education: [
+    timestamps: [
       // =====       [Timestamp Sample and Structure]      =====
       {
         date: '',
