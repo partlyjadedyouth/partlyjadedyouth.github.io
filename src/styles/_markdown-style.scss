@@ -1026,10 +1026,10 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 340px;
+  width: 250px;
   position: fixed;
-  top: 75px;
-  right: 0px;
+  top: 165px;
+  right: calc((100% - 850px) / 2 - 250px);
 
   ul {
     cursor: pointer;
@@ -1041,7 +1041,7 @@
         height: 30px;
         padding: 6px 2px;
         color: var(--secondary-text-color);
-        font-size: 14px;
+        font-size: 0.9em;
         border-bottom: none;
       }
     }

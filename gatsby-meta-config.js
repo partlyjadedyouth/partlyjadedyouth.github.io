@@ -5,15 +5,14 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `partlyjadedyouth/partlyjadedyouth.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
   author: {
     name: `Joonyoung Park`,
-    nickname: 'partlyjadedyouth',
     bio: {
-      thumbnail: 'profile.png', // Path to the image in the 'asset' folder
+      thumbnail: 'profile.png', // Path to the image in the 'assets' folder
     },
     social: {
       github: `https://github.com/partlyjadedyouth`,
@@ -23,6 +22,7 @@ module.exports = {
       rym: 'https://rateyourmusic.com/~Proshuto',
       email: `mogun99@snu.ac.kr`,
     },
+    nickname: 'partlyjadedyouth',
   },
 
   // metadata for About Page

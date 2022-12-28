@@ -2,7 +2,7 @@
 title: My First Post
 date: '2022-12-28 00:00:00'
 tags: test
-categories: test featured
+categories: test
 ---
 
 # Hello World!
