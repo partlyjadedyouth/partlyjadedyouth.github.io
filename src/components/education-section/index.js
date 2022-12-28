@@ -3,7 +3,7 @@ import SectionHeader from '../section-header';
 import IconButtonBar from '../icon-button-bar';
 import './style.scss';
 
-function TimeStampSection({ timestamps }) {
+function EducationSection({ timestamps }) {
   if (!timestamps || timestamps.length < 2) return null;
   return (
     <div className="timestamp-section">
@@ -12,7 +12,9 @@ function TimeStampSection({ timestamps }) {
         {timestamps.map((timestamp, index) =>
           index === 0 ? null : (
             <div className="timestamp" key={index}>
-              <div className="date">{timestamp.date}</div>
+              <div className="date">
+                {timestamp.date}
+              </div>
               <div className="activity">
                 {timestamp.activity}
                 <div className="description">
@@ -28,4 +30,4 @@ function TimeStampSection({ timestamps }) {
   );
 }
 
-export default TimeStampSection;
+export default EducationSection;

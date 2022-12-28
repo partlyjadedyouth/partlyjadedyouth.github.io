@@ -1,7 +1,6 @@
 module.exports = {
   title: `partlyjadedyouth.github.io`,
   description: `Joon's Blog`,
-  language: `en`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://partlyjadedyouth.github.io`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
@@ -27,8 +26,9 @@ module.exports = {
 
   // metadata for About Page
   about: {
-    timestamps: [
+    education: [
       // =====       [Timestamp Sample and Structure]      =====
+      // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
       {
         date: '',
         activity: '',
@@ -39,6 +39,7 @@ module.exports = {
           googlePlay: '',
           appStore: '',
           demo: '',
+          website:'',
         },
       },
       // ========================================================
@@ -46,10 +47,44 @@ module.exports = {
       {
         date: '2017.03 ~',
         activity: 'Seoul National University',
-        description: 'Electrical and Computer Engineering',
+        description: 'Dept. of Electrical and Computer Engineering',
         links: {
-          post: 'https://www.snu.ac.kr',
+          website: 'https://ee.snu.ac.kr',
         },
+      },
+      {
+        date: '2023.03 ~',
+        activity: 'Seoul National University',
+        description: 'Information Science',
+        links: {
+          website: 'https://isc.snu.ac.kr',
+        },
+      },
+    ],
+
+    workexperience: [
+      {
+        date: '',
+        activity: '',
+        description: '',
+        links: {
+          github: '',
+          post: '',
+          googlePlay: '',
+          appStore: '',
+          demo: '',
+          website:'',
+        },
+      },
+      // ========================================================
+      // ========================================================
+      {
+        date: '2019.08',
+        activity: 'Samsung Electro-Mechanics',
+        description: 'Engineer Intern',
+        links: {
+          website:'https://www.samsungsem.com/kr/index.do',
+        }, 
       },
     ],
 

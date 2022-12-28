@@ -3,19 +3,21 @@ import { graphql } from 'gatsby';
 import Layout from '../layout';
 import Seo from '../components/seo';
 import Bio from '../components/bio';
-import TimeStampSection from '../components/timestamp-section';
-import ProjectSection from '../components/project-section';
+import EducationSection from '../components/education-section';
+// import ProjectSection from '../components/project-section';
+import ExperienceSection from '../components/experience-section';
 
 function AboutPage({ data }) {
   const metaData = data.site.siteMetadata;
-  const { author, about, language } = metaData;
-  const { timestamps, projects } = about;
+  const { author, about } = metaData;
+  const { education, workexperience, projects } = about;
   return (
     <Layout>
       <Seo title="About" />
-      <Bio author={author} language={language} />
-      <TimeStampSection timestamps={timestamps} />
-      <ProjectSection projects={projects} />
+      <Bio author={author} />
+      <EducationSection timestamps={education} />
+      <ExperienceSection timestamps={workexperience} />
+      {/* <ProjectSection projects={projects} /> */}
     </Layout>
   );
 }
@@ -28,7 +30,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-        language
         author {
           name
           bio {
@@ -44,12 +45,13 @@ export const pageQuery = graphql`
         }
 
         about {
-          timestamps {
+          education {
             date
             activity
             description
             links {
               post
+              website
               github
               demo
               googlePlay
@@ -57,19 +59,15 @@ export const pageQuery = graphql`
             }
           }
 
-          projects {
-            title
+          workexperience {
+            date
+            activity
             description
-            techStack
-            thumbnailUrl
             links {
-              post
-              github
-              demo
-              googlePlay
-              appStore
+              website
             }
           }
+
         }
       }
     }

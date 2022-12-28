@@ -10,6 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import CameraIcon from '@mui/icons-material/LinkedCamera';
 import RYMIcon from '@mui/icons-material/LibraryMusic';
+import WebIcon from '@mui/icons-material/Language';
 
 import './style.scss';
 
@@ -37,6 +38,8 @@ function IconButtonBar({ links = {} }) {
         return <CameraIcon {...props} />;
       case 'rym':
         return <RYMIcon {...props} />;
+      case 'website':
+        return <WebIcon {...props} />;
       default:
         return <></>;
     }
