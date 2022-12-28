@@ -32,7 +32,6 @@ export const pageQuery = graphql`
         author {
           name
           bio {
-            role
             thumbnail
           }
           social {
@@ -48,6 +47,7 @@ export const pageQuery = graphql`
           timestamps {
             date
             activity
+            description
             links {
               post
               github

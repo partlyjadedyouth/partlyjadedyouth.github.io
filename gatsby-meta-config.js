@@ -13,14 +13,13 @@ module.exports = {
   author: {
     name: `Joonyoung Park`,
     bio: {
-      role: `undergraduate ECE student`,
       thumbnail: 'profile.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/partlyjadedyouth`,
       instagram: 'https://instagram.com/partlyjadedyouth',
       photography: 'https://instagram.com/mieserfotograf',
-      // linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      // linkedIn: ``, //
       rym: 'https://rateyourmusic.com/~Proshuto',
       email: `mogun99@snu.ac.kr`,
     },
@@ -33,6 +32,7 @@ module.exports = {
       {
         date: '',
         activity: '',
+        description: '',
         links: {
           github: '',
           post: '',
@@ -46,15 +46,14 @@ module.exports = {
       {
         date: '2017.03 ~',
         activity: 'Seoul National University',
+        description: 'Electrical and Computer Engineering',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: 'https://www.snu.ac.kr',
         },
       },
     ],
 
-    projects: [
+    projects: [ 
       // =====        [Project Sample and Structure]        =====
       // ===== 🚫 Don't erase this sample (여기 지우지 마세요!)  =====
       {
