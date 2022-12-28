@@ -11,6 +11,7 @@ module.exports = {
   ga: '0', // Google Analytics Tracking ID
   author: {
     name: `Joonyoung Park`,
+    nickname: 'partlyjadedyouth',
     bio: {
       thumbnail: 'profile.png', // Path to the image in the 'asset' folder
     },
@@ -55,7 +56,7 @@ module.exports = {
       {
         date: '2023.03 ~',
         activity: 'Seoul National University',
-        description: 'Information Science',
+        description: 'Dept. of Information Science and Culture',
         links: {
           website: 'https://isc.snu.ac.kr',
         },

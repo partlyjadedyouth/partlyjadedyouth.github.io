@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
           title
           author {
             name
+            nickname
             social {
               github
             }
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
       <PageHeader siteTitle={title || `Title`} />
       <main className="page-content">{children}</main>
       <PageFooter
-        author={author.name || `Author`}
+        author={author.nickname || `Author`}
         githubUrl={author.social?.github || `https://www.github.com`}
       />
       <ThemeSwitch />

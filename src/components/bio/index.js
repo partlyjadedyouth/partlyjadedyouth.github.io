@@ -3,7 +3,7 @@ import IconButtonBar from '../icon-button-bar';
 import Image from '../image';
 import './style.scss';
 
-function Bio({ author, language = 'ko' }) {
+function Bio({ author }) {
   if (!author) return null;
   const { bio, social, name } = author;
   return (
