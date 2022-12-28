@@ -5,7 +5,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: `partlyjadedyouth/partlyjadedyouth.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `partlyjadedyouth/blog-comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
