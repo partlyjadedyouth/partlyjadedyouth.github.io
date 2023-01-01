@@ -21,8 +21,9 @@ html {
 
   --markdown-table-even-cell-background-color: #f6f8fa;
   --markdown-table-border-color: #dfe2e5;
-  --markdown-blockquote-border-color: #dfe2e5;
+  --markdown-blockquote-border-color: #7cc2dc;
   --markdown-border-color: #e1e4e8;
+  --markdown-blockquote-text-color: #1c1d1e;
 }
 
 // dark mode colors
@@ -50,4 +51,5 @@ html[data-theme='dark'] {
   --markdown-table-border-color: #444c56;
   --markdown-blockquote-border-color: #4f5864;
   --markdown-border-color: #e1e4e8;
+  --markdown-blockquote-text-color: #fdfdfd;
 }

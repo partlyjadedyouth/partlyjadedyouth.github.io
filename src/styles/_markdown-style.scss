@@ -669,7 +669,7 @@
 
 .markdown blockquote {
   padding: 0 1em;
-  color: #1c1d1e;
+  color: var(--markdown-blockquote-text-color);
   border-left: 0.25em solid var(--markdown-blockquote-border-color);
 }
 
