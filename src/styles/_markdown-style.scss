@@ -1056,7 +1056,10 @@
 .markdown .gatsby-resp-image-wrapper {
   display: flex !important;
   justify-content: center !important;
-  width: 100% !important;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80% !important;
   max-height: $content-image-max-height !important;
 
   img {
@@ -1072,7 +1075,8 @@
 .markdown .gatsby-resp-image-wrapper+em {
   display: block;
   text-align: center;
-  font-style: italic;
+  font-style: normal;
   font-size: 15px;
   color: #6a737d;
+  margin-bottom: 30px;
 }
