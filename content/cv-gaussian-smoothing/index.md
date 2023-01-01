@@ -36,9 +36,9 @@ $n=2$일 때는 원래 이미지에 커널 [1, 2, 1]을 convolution해준 것과
 ![2D-Gaussian](2D-Gaussian.jpg)
 *Reference: [D. Sathyamoorthy](https://www.researchgate.net/publication/26487220_Linear_and_nonlinear_approach_for_DEM_smoothening)*
 
-> $
+> $$
 > h(i, j) = \cfrac{1}{2 \pi \sigma^2} \textnormal{exp}(-\cfrac{i^2 + j^2}{2 \sigma^2})
-> $
+> $$
 
 Gaussian function을 흔히 '종 모양'으로 생겼다고 말한다. 중심부에 가까울 수록 위로 볼록 튀어나와 있는 모양이다. 이를 이미지에 convolution하면 **Gaussian kernel의 중심에 가까울 수록 더 높은 가중치(weight)를 가지게 된다.**
 
@@ -51,15 +51,15 @@ Kernel을 이용한 이미지 프로세싱에서 kernel size는 상당히 중요
 
 이제 이 커널을 이미지에 convolution해보자. 아래와 같이 계산할 수 있다.
 
-> $
+> $$
 > g(i, j) = \cfrac{1}{2 \pi \sigma^2} \sum_{m} \sum_{n} \textnormal{exp}(-\cfrac{m^2+n^2}{2\sigma^2})f(i-m, j-n)
-> $
+> $$
 
 위의 식을 조금만 바꾸어 보자.
 
-> $
+> $$
 > g(i, j) = \cfrac{1}{2 \pi \sigma^2} \sum_{m} \textnormal{exp}(-\cfrac{m^2}{2\sigma^2}) \sum_{n} \textnormal{exp}(-\cfrac{n^2}{2\sigma^2}) f(i-m, j-n)
-> $
+> $$
 
 단순히 지수함수 안에 합쳐져 있던 $i$와 $j$를 분리한 것이다.
 
