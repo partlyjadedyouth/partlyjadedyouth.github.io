@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"My First Post","categories":"test"},"fields":{"slug":"/test/"}}},{"node":{"frontmatter":{"title":"Gatsby 테마로 GitHub Blog 만들기","categories":"blog featured"},"fields":{"slug":"/gatsby-github-blog/"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"title":"[Computer Vision] Gaussian Smoothing","categories":"featured computer-vision"},"fields":{"slug":"/cv-gaussian-smoothing/"}}}]}}}
