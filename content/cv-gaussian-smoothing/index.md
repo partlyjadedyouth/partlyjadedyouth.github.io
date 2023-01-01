@@ -106,7 +106,7 @@ for i in range(len(sigma)):
     plt.imshow(cv2.GaussianBlur(src, (0, 0), sigma[i]))
     plt.title(f"sigma == {sigma[i]}")
     
-plt.show()
+plt.show() 
 ```
 
 ### Result
