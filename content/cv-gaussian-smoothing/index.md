@@ -70,22 +70,42 @@ Kernel을 이용한 이미지 프로세싱에서 kernel size는 상당히 중요
 
 이렇게 만들면 시간 복잡도가 $O(PQN^2)$에서 $O(2PQN)$으로 크게 줄어든다. 그래서 **kernel을 그대로 사용하기보단 $x$-성분과 $y$-성분으로 나누어서 계산하는 것이 더 효율적이다.**
 
-## 3. Python Implementation
+## 3. Drawback of Gaussian Smoothing
+
+Gaussian smoothing은 구현하기 쉽고, $O(2PQN)$에 계산할 수 있기 때문에 계산 효율성이 좋다. Gaussian smoothing이 널리 쓰이는 이유이다. 하지만 단점도 존재한다.
+
+기본적으로 Gaussian smoothing은 인접한 픽셀들의 평균값을 이용하여 smoothing을 한다. 따라서 통계학에서 **평균**이 가지는 단점을 공유하는데, 바로 outlier에 취약하다는 것이다. 
+
+키가 170cm인 사람들 4명 사이에 200cm인 사람이 1명만 껴 있어도 그 평균은 176cm가 되어버리는 것을 생각해보자. 이미지에서도 마찬가지 일이 벌어진다.
+
+![salt-pepper](Noise_salt_and_pepper.png)
+*Reference: [Wikipedia](https://commons.wikimedia.org/wiki/File:Noise_salt_and_pepper.png)*
+
+이미지에서 outlier라고 한다면 대표적으로 `점잡음(salt-and-pepper noise)`이 있다. 단어 그대로 이미지에 소금과 후추를 뿌려놓은 것과 같다고 하여 붙여진 이름이다. 
+
+![salt-pepper-gaussian](saltpepper-gaussian.png)
+*&nbsp;*
+
+위 이미지의 특정 부분을 확대하여 $\sigma=3$의 Gaussian kernel을 적용하면 이렇게 된다. 확실히 줄어들긴 했지만 여전히 자글자글한 노이즈가 남아있는 모습이다. 여기서 $\sigma$를 더 키우면 원본의 형체를 알아보기 힘들 것이다.
+
+따라서 이런 유형의 노이즈에는 Gaussian smoothing을 적용하기보다, [중앙값 필터(median filter)](https://partlyjadedyouth.github.io/cv-median-filter/)같은 다른 방법을 사용하는 것이 좋다.
+
+## 4. Python Implementation
 
 OpenCV의 `GaussianBlur`를 이용하면 Gaussian smoothing을 쉽게 구현할 수 있다.
 
 ```python
-cv2.GaussianBlur(src, ksize, sigmaX, dst=None, sigmaY=None, borderType=None)
+cv2.GaussianBlur(src, ksize, sigmaX, dst=None, sigmaY=None, borderType=None) -> dst
 ```
-> src: 원본 이미지
+> `src` 원본 이미지
 > 
-> ksize: Gaussian kernel size. (0, 0)을 넣을 경우 sigmaX를 이용해 알아서 계산해준다.
+> `ksize` Gaussian kernel size. (0, 0)을 넣을 경우 sigmaX를 이용해 알아서 계산해준다.
 >
-> sigmaX: $x$-성분 $\sigma$
+> `sigmaX` $x$-성분 $\sigma$
 >
-> sigmaY: $y$-성분 $\sigma$. 아무것도 넣지 않을 경우 sigmaX와 같게 설정된다.
+> `sigmaY` $y$-성분 $\sigma$. 아무것도 넣지 않을 경우 sigmaX와 같게 설정된다.
 >
-> borderType: 이미지의 가장자리에서 확장된 픽셀 값을 채우는 방법. [참고](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga209f2f4869e304c82d07739337eae7c5)
+> `borderType` 이미지의 가장자리에서 확장된 픽셀 값을 채우는 방법. [참고](https://docs.opencv.org/3.4/d2/de8/group__core__array.html#ga209f2f4869e304c82d07739337eae7c5) 
 
 ### Example Code
 ```python
