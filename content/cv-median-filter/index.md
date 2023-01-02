@@ -25,7 +25,7 @@ Median filter는 Gaussian smoothing과 다르게 convolution을 이용하여 계
 
 예를 들어 키가 170cm인 사람 4명과 200cm인 사람 1명이 있다고 해 보자. 5명의 키의 평균은 178cm이고 중앙값은 170cm인데, 평균의 경우 200cm라는 outlier때문에 중앙값에 비해 대표성이 떨어진다. Gaussian filter와 median filter의 차이점도 정확히 같은 이유에서 나온다고 볼 수 있다.
 
-따라서, median filter는 Gaussian filter와 달리 `비선형 필터(non-linear filter)`이다. Median filter의 output인 중앙값은 input과 비선형적이기 때문이다.[(참고)](https://en.wikipedia.org/wiki/Nonlinear_filter)
+따라서 impulsive noise를 제거할 때에는 Gaussian smoothing보다는 median filtering을 사용하는 것이 바람직하다.
 
 ## 2. Drawbacks
 
