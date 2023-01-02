@@ -16,16 +16,16 @@ categories: computer-vision
 
 Gaussian blur는 인접한 픽셀들의 **평균**을 이용한다. 이 경우 결과물이 `점잡음(salt-and-pepper noise)`과 같은 outlier들에 상당히 취약하다는 단점이 있다.
 
+![median-filtering](median_filter_and_ranking.jpg)
+*Reference: https://neubias.github.io/training-resources/median_filter/index.html*
+
 Median filter는 Gaussian smoothing과 다르게 convolution을 이용하여 계산하지 않는다. 
 
 대신 인접한 픽셀들의 값을 전부 **정렬**(**sort**)한 다음 그 **중앙값**(**median**)을 구한다. 따라서 Gaussian smoothing에 비해 outlier들의 영향을 덜 받게 된다.
 
 예를 들어 키가 170cm인 사람 4명과 200cm인 사람 1명이 있다고 해 보자. 5명의 키의 평균은 178cm이고 중앙값은 170cm인데, 평균의 경우 200cm라는 outlier때문에 중앙값에 비해 대표성이 떨어진다. Gaussian filter와 median filter의 차이점도 정확히 같은 이유에서 나온다고 볼 수 있다.
 
-![median-filtering](median_filter_and_ranking.jpg)
-*Reference: https://neubias.github.io/training-resources/median_filter/index.html*
-
-또한, median filter는 Gaussian filter와 달리 `비선형 필터(non-linear filter)`이다. Kernel과 이미지의 convolution을 이용하지 않는 대신, 픽셀을 정렬한 다음 중앙값을 찾아내는 방식을 이용하기 때문이다.
+따라서, median filter는 Gaussian filter와 달리 `비선형 필터(non-linear filter)`이다. Median filter의 output인 중앙값은 input과 비선형적이기 때문이다.[(참고)](https://en.wikipedia.org/wiki/Nonlinear_filter)
 
 ## 2. Drawbacks
 
