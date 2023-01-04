@@ -2,7 +2,7 @@
 title: '[Computer Vision] Gaussian Smoothing'
 date: '2023-01-01 00:00:00'
 tags: computer-vision gaussian kernel blur smoothing
-categories: featured computer-vision
+categories: computer-vision
 ---
 
 Smoothing이란 쉽게 말해 **이미지를 흐릿하게 만들어주는 것**이다. 
