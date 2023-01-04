@@ -122,7 +122,7 @@ Reference: https://neubias.github.io/training-resources/median_filter/index.html
     </span>
 <em>Reference: <a href="https://neubias.github.io/training-resources/median_filter/index.html">https://neubias.github.io/training-resources/median_filter/index.html</a></em></p>
 <p>Median filter는 Gaussian smoothing과 다르게 convolution을 이용하여 계산하지 않는다.</p>
-<p>대신 인접한 픽셀들의 값을 전부 <strong>정렬</strong>(<strong>sort</strong>)한 다음 그 <strong>중앙값</strong>(<strong>median</strong>)을 구한다. 따라서 Gaussian smoothing에 비해 outlier들의 영향을 덜 받게 된다.</p>
+<p>대신 인접한 픽셀들의 값을 전부 <strong>정렬</strong>(<strong>sort</strong>)한 다음 그 <strong>중앙값</strong>(<strong>median</strong>)을 구하므로, Gaussian smoothing에 비해 outlier들의 영향을 덜 받게 된다.</p>
 <p>예를 들어 키가 170cm인 사람 4명과 200cm인 사람 1명이 있다고 해 보자. 5명의 키의 평균은 178cm이고 중앙값은 170cm인데, 평균의 경우 200cm라는 outlier때문에 중앙값에 비해 대표성이 떨어진다. Gaussian filter와 median filter의 차이점도 정확히 같은 이유에서 나온다고 볼 수 있다.</p>
 <p>따라서 impulsive noise를 제거할 때에는 Gaussian smoothing보다는 median filtering을 사용하는 것이 바람직하다.</p>
 <h2 id="2-drawbacks" style="position:relative;"><a href="#2-drawbacks" aria-label="2 drawbacks permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Drawbacks</h2>
