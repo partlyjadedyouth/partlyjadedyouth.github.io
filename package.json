@@ -53,7 +53,7 @@
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public",
+    "deploy": "gatsby clean && gatsby build && cp google85ac135241d5e4b9.html public/ && gh-pages -d public",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
