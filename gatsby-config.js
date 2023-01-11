@@ -2,18 +2,10 @@ const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const metaConfig = require('./gatsby-meta-config');
 
-const remarkSlug = require(`remark-slug`);
-
 module.exports = {
   siteMetadata: metaConfig,
 
   plugins: [
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        remarkPlugins: [remarkSlug]
-      }
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
