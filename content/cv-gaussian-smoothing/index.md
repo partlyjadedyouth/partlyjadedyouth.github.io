@@ -88,7 +88,7 @@ Gaussian smoothing은 구현하기 쉽고, $O(2PQN)$에 계산할 수 있기 때
 
 위 이미지의 특정 부분을 확대하여 $\sigma=3$의 Gaussian kernel을 적용하면 이렇게 된다. 확실히 줄어들긴 했지만 여전히 자글자글한 노이즈가 남아있는 모습이다. 여기서 $\sigma$를 더 키우면 원본의 형체를 알아보기 힘들 것이다.
 
-따라서 이런 유형의 노이즈에는 Gaussian smoothing을 적용하기보다, [중앙값 필터(median filter)](https://partlyjadedyouth.github.io/cv-median-filter/)같은 다른 방법을 사용하는 것이 좋다.
+따라서 이런 유형의 노이즈에는 Gaussian smoothing을 적용하기보다, [중앙값 필터(median filter)](/cv-median-filter/)같은 다른 방법을 사용하는 것이 좋다.
 
 ## 4. Python Implementation
 

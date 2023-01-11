@@ -7,7 +7,7 @@ categories: computer-vision
 
 중앙값 필터(median filter)는 어떤 픽셀의 값을 주변 픽셀들의 중앙값으로 변환시켜주는 디지털 필터이다. 
 
-[지난 글](https://partlyjadedyouth.github.io/cv-gaussian-smoothing/)에서 다루었던 Gaussian smoothing과 비슷하게 이미지를 흐릿하게 만드는 데 쓰인다. 하지만 쓰임새나 결과물의 느낌이 상당히 다르다.
+[지난 글](/cv-gaussian-smoothing/)에서 다루었던 Gaussian smoothing과 비슷하게 이미지를 흐릿하게 만드는 데 쓰인다. 하지만 쓰임새나 결과물의 느낌이 상당히 다르다.
 
 ## 1. Gaussian Filter vs Median Filter
 
