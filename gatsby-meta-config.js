@@ -8,7 +8,7 @@ module.exports = {
       repo: `partlyjadedyouth/blog-comments`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: '0', // Google Analytics Tracking ID
+  ga: 'G-3F4WHCLW6R', // Google Analytics Tracking ID
   author: {
     name: `Joonyoung Park`,
     bio: {
