@@ -25,18 +25,10 @@ module.exports = {
       options: {
         host: 'https://partlyjadedyouth.github.io',
         sitemap: 'https://partlyjadedyouth.github.io/sitemap.xml',
-        resolveEnv: () => NETLIFY_ENV,
-        env: {
-          production: {
-            policy: [{ userAgent: '*' }],
-          },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          'deploy-preview': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-        },
+        policy: [{
+          userAgent: '*',
+          allow: '/',
+        }],
       },
     },
     {
